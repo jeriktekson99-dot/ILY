@@ -46,7 +46,7 @@ export const MEMORIES: PhotoMemory[] = [
   { 
     id: 1, 
     url: kissImg, 
-    caption: "Your Kisses", 
+    caption: "Silly Moments", 
     rotation: -2 
   },
   { 
@@ -58,13 +58,13 @@ export const MEMORIES: PhotoMemory[] = [
   { 
     id: 3, 
     url: selfieImg, 
-    caption: "Pure Joy", 
+    caption: "Your Kisses", 
     rotation: -2 
   },
   { 
     id: 4, 
     url: rawrImg, 
-    caption: "Silly Moments", 
+    caption: "Pure Joy", 
     rotation: 2 
   },
 ];
