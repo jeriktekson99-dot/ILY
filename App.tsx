@@ -15,6 +15,15 @@ function App() {
 
   useEffect(() => {
     document.title = APP_NAME;
+    
+    // Safety fallback: If animation fails or user tabs out, 
+    // force loading to false after a maximum wait time (e.g. 5 seconds)
+    // Preloader animation is ~4s total (2.5 delay + 1.5 fade)
+    const safetyTimer = setTimeout(() => {
+      setLoading(false);
+    }, 5500);
+
+    return () => clearTimeout(safetyTimer);
   }, []);
 
   return (
@@ -22,7 +31,7 @@ function App() {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       
       {!loading && (
-        <main className="bg-wine-950 min-h-screen text-rose-50 selection:bg-rose-900 selection:text-white">
+        <main className="bg-wine-950 min-h-screen text-rose-50 selection:bg-rose-900 selection:text-white animate-fade-in">
           <Hero />
           <Timeline />
           <LoveLetter />
