@@ -2,17 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 
-const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) => (
-  <div className="flex flex-col items-center mx-4 md:mx-8">
-    <span className="font-serif text-4xl md:text-6xl text-rose-50 tabular-nums">
-      {value.toString().padStart(2, '0')}
-    </span>
-    <span className="font-sans text-xs md:text-sm text-gold-400/70 uppercase tracking-widest mt-2">
-      {label}
-    </span>
-  </div>
-);
-
 const Countdown: React.FC = () => {
   // Use a fixed date for demonstration (Next Valentine's)
   // Logic checks if today is past Feb 14th of current year, if so, target next year
@@ -48,6 +37,17 @@ const Countdown: React.FC = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) => (
+    <div className="flex flex-col items-center mx-4 md:mx-8">
+      <span className="font-serif text-4xl md:text-6xl text-rose-50 tabular-nums">
+        {value.toString().padStart(2, '0')}
+      </span>
+      <span className="font-sans text-xs md:text-sm text-gold-400/70 uppercase tracking-widest mt-2">
+        {label}
+      </span>
+    </div>
+  );
 
   return (
     <section id="countdown" className="py-24 bg-gradient-to-b from-black to-wine-950 flex flex-col items-center">

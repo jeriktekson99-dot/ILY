@@ -1,6 +1,13 @@
 import { TimelineEvent, PhotoMemory, Reason } from './types';
-import { Heart, Calendar, MapPin, Infinity, Star } from 'lucide-react';
+import { Heart, Calendar, MapPin, Infinity } from 'lucide-react';
 import React from 'react';
+
+// Using direct hosted URLs to resolve module import errors.
+// These links point directly to the images provided.
+const kissImg = "https://drive.google.com/uc?export=view&id=1QY9wf_i2l0ZLrHxNKNn6Yvfe2QDA9Ajk";
+const sleepyImg = "https://drive.google.com/uc?export=view&id=1ej-tSV7b-0Lb1UMrnrUS2pts9oUeBx36";
+const selfieImg = "https://drive.google.com/uc?export=view&id=1jTrjImX16_vvRkUdQf36mE7lPeAbEeP5";
+const rawrImg = "https://drive.google.com/uc?export=view&id=1k3yyLi01wKOhIEHAZUi4GBiMrlvKoHzG";
 
 export const APP_NAME = "Lumière d'Amour";
 
@@ -34,32 +41,29 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
 // ==================================================================================
 // PHOTO MEMORIES
 // ==================================================================================
-// We are using direct string paths to the 'images' folder.
-// Ensure you have a folder named "images" at the root level.
-// ==================================================================================
 
 export const MEMORIES: PhotoMemory[] = [
   { 
     id: 1, 
-    url: "images/kiss.jpg", 
+    url: kissImg, 
     caption: "Your Kisses", 
     rotation: -2 
   },
   { 
     id: 2, 
-    url: "images/sleepyhead.jpg", 
+    url: sleepyImg,
     caption: "Sleepy Head", 
     rotation: 2 
   },
   { 
     id: 3, 
-    url: "images/selfie.jpg", 
+    url: selfieImg, 
     caption: "Pure Joy", 
     rotation: -2 
   },
   { 
     id: 4, 
-    url: "images/rawr.jpg", 
+    url: rawrImg, 
     caption: "Silly Moments", 
     rotation: 2 
   },
