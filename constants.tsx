@@ -34,40 +34,31 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
 // ==================================================================================
 // PHOTO MEMORIES
 // ==================================================================================
-// NOTE: Since this project runs directly in the browser (Native ESM), you cannot 
-// "import" images. You must use string paths or external URLs.
-//
-// TO USE YOUR OWN PHOTOS:
-// 1. Create a folder named "images" in the project ROOT (next to index.html).
-// 2. Put your files there (e.g., kiss.jpg).
-// 3. Change the url below to: "images/kiss.jpg"
+// We are using direct string paths to the 'images' folder.
+// Ensure you have a folder named "images" at the root level.
 // ==================================================================================
 
 export const MEMORIES: PhotoMemory[] = [
   { 
     id: 1, 
-    // Fallback: "images/kiss.jpg"
     url: "images/kiss.jpg", 
     caption: "Your Kisses", 
     rotation: -2 
   },
   { 
     id: 2, 
-    // Fallback: "images/sleepyhead.jpg"
     url: "images/sleepyhead.jpg", 
     caption: "Sleepy Head", 
     rotation: 2 
   },
   { 
     id: 3, 
-    // Fallback: "images/selfie.jpg"
     url: "images/selfie.jpg", 
     caption: "Pure Joy", 
     rotation: -2 
   },
   { 
     id: 4, 
-    // Fallback: "images/rawr.jpg"
     url: "images/rawr.jpg", 
     caption: "Silly Moments", 
     rotation: 2 
