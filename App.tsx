@@ -28,6 +28,7 @@ function App() {
 
   return (
     <>
+      <MusicPlayer showButton={!loading} />
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       
       {!loading && (
@@ -39,7 +40,6 @@ function App() {
           <Reasons />
           <Countdown />
           <FinalSurprise />
-          <MusicPlayer />
           
           {/* Simple Footer */}
           <footer className="py-8 text-center text-rose-900/30 text-xs font-sans uppercase tracking-widest">
