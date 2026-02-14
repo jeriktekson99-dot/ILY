@@ -39,6 +39,7 @@ const Gallery: React.FC = () => {
                   alt={memory.caption} 
                   className="absolute inset-0 w-full h-full object-cover object-center filter sepia-[0.2] contrast-[0.9] group-hover:filter-none transition-all duration-500" 
                   loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute bottom-4 left-0 right-0 text-center">

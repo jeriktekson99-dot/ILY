@@ -2,12 +2,12 @@ import { TimelineEvent, PhotoMemory, Reason } from './types';
 import { Heart, Calendar, MapPin, Infinity } from 'lucide-react';
 import React from 'react';
 
-// Using direct hosted URLs to resolve module import errors.
-// These links point directly to the images provided.
-const kissImg = "https://drive.google.com/uc?export=view&id=1QY9wf_i2l0ZLrHxNKNn6Yvfe2QDA9Ajk";
-const sleepyImg = "https://drive.google.com/uc?export=view&id=1ej-tSV7b-0Lb1UMrnrUS2pts9oUeBx36";
-const selfieImg = "https://drive.google.com/uc?export=view&id=1jTrjImX16_vvRkUdQf36mE7lPeAbEeP5";
-const rawrImg = "https://drive.google.com/uc?export=view&id=1k3yyLi01wKOhIEHAZUi4GBiMrlvKoHzG";
+// Using the 'lh3.googleusercontent.com/d/' format which is more reliable for embedding images
+// than the standard drive export links.
+const kissImg = "https://lh3.googleusercontent.com/d/1QY9wf_i2l0ZLrHxNKNn6Yvfe2QDA9Ajk";
+const sleepyImg = "https://lh3.googleusercontent.com/d/1ej-tSV7b-0Lb1UMrnrUS2pts9oUeBx36";
+const selfieImg = "https://lh3.googleusercontent.com/d/1jTrjImX16_vvRkUdQf36mE7lPeAbEeP5";
+const rawrImg = "https://lh3.googleusercontent.com/d/1k3yyLi01wKOhIEHAZUi4GBiMrlvKoHzG";
 
 export const APP_NAME = "Lumière d'Amour";
 
@@ -51,7 +51,7 @@ export const MEMORIES: PhotoMemory[] = [
   },
   { 
     id: 2, 
-    url: sleepyImg,
+    url: sleepyImg, 
     caption: "Sleepy Head", 
     rotation: 2 
   },
