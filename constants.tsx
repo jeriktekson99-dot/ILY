@@ -32,33 +32,34 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
 ];
 
 // NOTE: Replace the 'url' strings below with the paths to your actual photos
-// Example: url: "/photos/my-photo-1.jpg"
+// Example: url: "./images/my-photo-1.jpg"
+// IMPORTANT: Paths must start with "./" for them to work on GitHub Pages
 export const MEMORIES: PhotoMemory[] = [
   { 
     id: 1, 
     // Description: Guy kissing girl on cheek
-    url: "/images/kiss.jpg", 
+    url: "./images/kiss.jpg", 
     caption: "Your Kisses", 
     rotation: -2 
   },
   { 
     id: 2, 
     // Description: Guy sleeping, girl taking selfie
-    url: "/images/sleepyhead.jpg", 
+    url: "./images/sleepyhead.jpg", 
     caption: "Sleepy Head", 
     rotation: 2 
   },
   { 
     id: 3, 
     // Description: Big happy smiles
-    url: "/images/selfie.jpg", 
+    url: "./images/selfie.jpg", 
     caption: "Pure Joy", 
     rotation: -2 
   },
   { 
     id: 4, 
     // Description: Goofy/Silly moment
-    url: "/images/rawr.jpg", 
+    url: "./images/rawr.jpg", 
     caption: "Silly Moments", 
     rotation: 2 
   },
